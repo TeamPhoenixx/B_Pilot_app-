@@ -106,7 +106,7 @@ class AboutUsPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
