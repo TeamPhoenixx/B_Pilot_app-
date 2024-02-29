@@ -414,7 +414,7 @@ class _PilotLoginScreenState extends State<PilotLoginScreen> {
             ],
           ),
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
