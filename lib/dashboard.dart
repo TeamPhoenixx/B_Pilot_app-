@@ -144,3 +144,89 @@ class NotificationsView extends StatelessWidget {
     );
   }
 }
+class ProfileView extends StatelessWidget {
+  const ProfileView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'User Name: John Doe',
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          const SizedBox(height: 10),
+          const Text(
+            'NIC Number: XXXXXXXXXXXX',
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HelpSupportPage(),
+                ),
+              );
+            },
+            child: const Text(
+              'Go to Help & Support',
+            ),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AboutUsPage(),
+                ),
+              );
+            },
+            child: const Text(
+              'Go to About Us',
+            ),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.red,
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            onPressed: () {
+              Navigator.popUntil(context, ModalRoute.withName('/'));
+              // Implement log out functionality here
+            },
+            child: const Text(
+              'Log Out',
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
