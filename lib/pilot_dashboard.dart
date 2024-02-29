@@ -1,6 +1,7 @@
 // pilot_dashboard.dart
 
 import 'package:flutter/material.dart';
+import 'pilot_notification.dart';
 
 class PilotDashboardScreen extends StatefulWidget {
   const PilotDashboardScreen({Key? key}) : super(key: key);
@@ -52,10 +53,20 @@ class _PilotDashboardScreenState extends State<PilotDashboardScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
-          // Handle bottom navigation item tap
           setState(() {
             _currentIndex = index;
           });
+
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const PilotNotificationScreen(
+                  busRegistrationNumber: '',
+                ),
+              ),
+            );
+          }
         },
         items: const [
           BottomNavigationBarItem(
