@@ -123,7 +123,7 @@ class HelpSupportPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
