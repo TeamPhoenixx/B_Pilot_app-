@@ -1,6 +1,9 @@
-// ignore_for_file: unused_field, unused_impor
-import 'package:flutter/material.dart';
+// ignore_for_file: unused_field, unused_import
 
+import 'package:flutter/material.dart';
+import 'signup.dart';
+import 'passenger_signup.dart';
+import 'pilot_signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +23,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        
+        '/signup': (context) => const SignUpScreen(),
+        '/signup/passenger': (context) => const PassengerSignUpScreen(),
+        '/signup/pilot': (context) => const PilotSignUpScreen(),
         '/': (context) => const RegistrationScreen(),
         '/login': (context) => const LoginScreen(),
         '/person_login': (context) => const PersonLoginScreen(),
@@ -410,6 +415,6 @@ class _PilotLoginScreenState extends State<PilotLoginScreen> {
           ),
         ),
       ),
-   );
- }
+    );
+  }
 }
