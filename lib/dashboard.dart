@@ -225,8 +225,7 @@ class ProfileView extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
-
